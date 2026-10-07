@@ -1,0 +1,16 @@
+{
+  "portrait": "images/yaser.webp",
+  "email": "yaser.uxui@gmail.com",
+  "whatsapp": "201080840902",
+  "cv": "cv/yaser-cv.pdf",
+  "social": {
+    "behance": "https://www.behance.net/yaseruxui",
+    "dribbble": "https://dribbble.com/desyaserahmed",
+    "linkedin": "https://www.linkedin.com/in/desyaserahmed"
+  },
+  "stats": [
+    6,
+    48,
+    12
+  ]
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Justin Sinclair",
+    "company": "Epiphany Education",
+    "photo": "/images/testimonials/placeholder.svg",
+    "logo": "/images/testimonials/logo-placeholder.svg",
+    "placeholder": true,
+    "audio": "",
+    "role": { "ar": "الرئيس التنفيذي", "en": "CEO" },
+    "quote": {
+      "ar": "ياسر سريع الاستجابة وسهل التعاون، حوّل رؤيتنا لمنتج حقيقي وسلّمنا كل التفاصيل لنكمل بأنفسنا.",
+      "en": "Yaser was responsive and easy to work with. He brought our vision to life and handed everything off so our team could continue."
+    }
+  },
+  {
+    "name": "Harper Tucker",
+    "company": "Growth CFO",
+    "photo": "/images/testimonials/placeholder.svg",
+    "logo": "/images/testimonials/logo-placeholder.svg",
+    "placeholder": true,
+    "audio": "",
+    "role": { "ar": "المؤسِّسة", "en": "Founder" },
+    "quote": {
+      "ar": "اهتمام شديد بالتفاصيل، أفكار جديدة باستمرار، ومرونة كبيرة مع الملاحظات — وجودة عالية في وقت قياسي.",
+      "en": "Extremely attentive, always brainstorming new ideas, and very flexible with feedback — high-quality work, fast."
+    }
+  },
+  {
+    "name": "Joshua Otten",
+    "company": "NIL Data Solutions",
+    "photo": "/images/testimonials/placeholder.svg",
+    "logo": "/images/testimonials/logo-placeholder.svg",
+    "placeholder": true,
+    "audio": "",
+    "role": { "ar": "الرئيس التنفيذي", "en": "CEO" },
+    "quote": {
+      "ar": "من أفضل من تعاملت معهم في التصميم والتطوير — عين إبداعية قوية وتسليم سريع. سأعمل معه مجددًا بالتأكيد.",
+      "en": "One of the best design/dev contractors I've worked with — strong creative eye and fast turnaround. Will work with him again."
+    }
+  }
+]

@@ -1,0 +1,246 @@
+{
+  "ar": {
+    "name": "ياسر أبو مصطفى",
+    "role": "مصمم تجربة وواجهات مستخدم · مصمم جرافيك",
+    "tagline": "أكثر من 8 سنوات في التصميم، منها 6 سنوات في تجربة وواجهات المستخدم — أحوّل الأفكار إلى واجهات رقمية وهويات بصرية تُحبّها العيون وتسهّل الحياة.",
+    "download": "تحميل PDF",
+    "back": "العودة للرئيسية",
+    "location": "القاهرة، مصر",
+    "sections": {
+      "experience": "الخبرات",
+      "skills": "المهارات",
+      "education": "التعليم",
+      "courses": "الدورات",
+      "references": "توصيات",
+      "tools": "أدوات التصميم",
+      "ai": "أدوات الذكاء الاصطناعي",
+      "personal": "مهارات شخصية"
+    },
+    "experience": [
+      {
+        "date": "2025 — الآن",
+        "role": "مصمم UX/UI وجرافيك",
+        "org": "Apex لحلول تقنية المعلومات",
+        "desc": "تصميم واجهات المواقع وتطبيقات الموبايل، إلى جانب الشعارات والهويات البصرية والمطبوعات ومحتوى السوشيال ميديا.",
+        "logo": "images/companies/apex.svg"
+      },
+      {
+        "date": "2024 — 2025",
+        "role": "مصمم UX/UI وجرافيك",
+        "org": "لمسة حبر (Ink Touch) — السعودية",
+        "desc": "عملت عن بُعد لمدة عام كامل مع الشركة على الشعارات والهويات البصرية ومحتوى السوشيال ميديا، إلى جانب تصميم الواجهات.",
+        "logo": "images/companies/inktouch.jpg"
+      },
+      {
+        "date": "2021 — 2023",
+        "role": "مصمم UX/UI",
+        "org": "In2world",
+        "desc": "تصميم تجربة وواجهات المستخدم للمواقع الإلكترونية وتطبيقات الموبايل.",
+        "logo": "images/companies/in2world.jpg"
+      },
+      {
+        "date": "2020 — 2021",
+        "role": "مصمم UX/UI",
+        "org": "منصات العمل الحر",
+        "desc": "تصميم تجربة وواجهات تطبيقات الموبايل والمواقع لعملاء عبر منصات العمل الحر.",
+        "logo": "icon:freelance"
+      },
+      {
+        "date": "2018 — 2020",
+        "role": "مصمم جرافيك",
+        "org": "منصات العمل الحر",
+        "desc": "شعارات وهويات بصرية وتصاميم سوشيال ميديا ساعدت العملاء على تنمية أعمالهم.",
+        "logo": "icon:freelance"
+      }
+    ],
+    "technical": [
+      "تصميم UX/UI",
+      "التصميم الجرافيكي والهوية البصرية"
+    ],
+    "tools": [
+      "Figma",
+      "Adobe XD",
+      "Illustrator",
+      "Framer"
+    ],
+    "aiTools": [
+      "Claude",
+      "Gemini",
+      "ChatGPT"
+    ],
+    "personal": [
+      "الإبداع",
+      "العمل الجماعي",
+      "القيادة",
+      "الدافعية"
+    ],
+    "education": [
+      {
+        "date": "2016 — 2018",
+        "title": "دبلوم الحاسب في التقنية",
+        "org": "كلية غزة للتدريب (GTC)",
+        "desc": "تخصص الحاسب في التقنية بمعدل 92.3% على مدار سنتين دراسيتين."
+      }
+    ],
+    "courses": [
+      {
+        "n": "تصميم UX/UI",
+        "h": 120,
+        "org": "كلية تدريب خانيونس · 2020–2021"
+      },
+      {
+        "n": "تصميم الجرافيك",
+        "h": 120,
+        "org": "Udemy · 2017–2018"
+      },
+      {
+        "n": "العمل الحر",
+        "h": 80,
+        "org": "Gaza Sky Geeks · 2018–2019"
+      },
+      {
+        "n": "ريادة الأعمال",
+        "h": 30,
+        "org": "جمعية الثقافة والفكر الحر · 2020–2021"
+      },
+      {
+        "n": "التسويق الرقمي",
+        "h": 25,
+        "org": "جمعية الثقافة والفكر الحر · 2019–2020"
+      }
+    ],
+    "refNote": "بيانات التواصل مع المراجع متاحة عند الطلب.",
+    "references": [
+      {
+        "name": "د. محمد غزال",
+        "role": "الرئيس التنفيذي — IN2WORLD"
+      },
+      {
+        "name": "سعد ج. صنع الله",
+        "role": "مهندس حاسب"
+      }
+    ]
+  },
+  "en": {
+    "name": "Yaser A. Abu Mustafa",
+    "role": "UX/UI & Graphic Designer",
+    "tagline": "8+ years in design, 6 of them in UX/UI — turning ideas into digital interfaces and visual identities that look great and make life easier.",
+    "download": "Download PDF",
+    "back": "Back to home",
+    "location": "Cairo, Egypt",
+    "sections": {
+      "experience": "Experience",
+      "skills": "Skills",
+      "education": "Education",
+      "courses": "Courses",
+      "references": "References",
+      "tools": "Design tools",
+      "ai": "AI tools",
+      "personal": "Personal skills"
+    },
+    "experience": [
+      {
+        "date": "2025 — Now",
+        "role": "UX/UI & Graphic Designer",
+        "org": "Apex for IT Solutions",
+        "desc": "Designing websites and mobile apps, alongside logos, visual identity, print and social media design.",
+        "logo": "images/companies/apex.svg"
+      },
+      {
+        "date": "2024 — 2025",
+        "role": "UX/UI & Graphic Designer",
+        "org": "Ink Touch — Saudi Arabia",
+        "desc": "Worked remotely for a full year with the company on logos, visual identities and social media, alongside interface design.",
+        "logo": "images/companies/inktouch.jpg"
+      },
+      {
+        "date": "2021 — 2023",
+        "role": "UX/UI Designer",
+        "org": "In2world",
+        "desc": "Designed user experiences and interfaces for websites and mobile apps.",
+        "logo": "images/companies/in2world.jpg"
+      },
+      {
+        "date": "2020 — 2021",
+        "role": "UX/UI Designer",
+        "org": "Freelance Platforms",
+        "desc": "Designed mobile app and website experiences for clients on freelancing platforms.",
+        "logo": "icon:freelance"
+      },
+      {
+        "date": "2018 — 2020",
+        "role": "Graphic Designer",
+        "org": "Freelance Platforms",
+        "desc": "Logos, visual identities and social media design that helped clients grow their businesses.",
+        "logo": "icon:freelance"
+      }
+    ],
+    "technical": [
+      "UX/UI Design",
+      "Graphic Design & Visual Identity"
+    ],
+    "tools": [
+      "Figma",
+      "Adobe XD",
+      "Illustrator",
+      "Framer"
+    ],
+    "aiTools": [
+      "Claude",
+      "Gemini",
+      "ChatGPT"
+    ],
+    "personal": [
+      "Creativity",
+      "Teamwork",
+      "Leadership",
+      "Motivation"
+    ],
+    "education": [
+      {
+        "date": "2016 — 2018",
+        "title": "Diploma, Computer in Technology",
+        "org": "Gaza Training College (GTC)",
+        "desc": "Specialized in Computer in Technology with a 92.3% grade over two years of study."
+      }
+    ],
+    "courses": [
+      {
+        "n": "UX/UI Design",
+        "h": 120,
+        "org": "Khanyounis Training College · 2020–2021"
+      },
+      {
+        "n": "Graphic Design",
+        "h": 120,
+        "org": "Udemy · 2017–2018"
+      },
+      {
+        "n": "Freelancing",
+        "h": 80,
+        "org": "Gaza Sky Geeks · 2018–2019"
+      },
+      {
+        "n": "Entrepreneurship",
+        "h": 30,
+        "org": "Culture & Free Thought Assoc. · 2020–2021"
+      },
+      {
+        "n": "Digital Marketing",
+        "h": 25,
+        "org": "Culture & Free Thought Assoc. · 2019–2020"
+      }
+    ],
+    "refNote": "Reference contact details are available on request.",
+    "references": [
+      {
+        "name": "Dr. Mohammed Ghazal",
+        "role": "CEO — IN2WORLD"
+      },
+      {
+        "name": "Saad J. SunoAllah",
+        "role": "Computer Engineer"
+      }
+    ]
+  }
+}

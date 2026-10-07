@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>OG</title>
+<!-- Social share image (1200×630), rendered by scripts/render-og.mjs (?l=ar|en). -->
+<style>
+@font-face { font-family: "T"; src: url("../../public/fonts/thmanyahsans-Regular.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "T"; src: url("../../public/fonts/thmanyahsans-Medium.woff2") format("woff2"); font-weight: 500; }
+@font-face { font-family: "T"; src: url("../../public/fonts/thmanyahsans-Bold.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "S"; src: url("../../public/fonts/thmanyahserifdisplay-Medium.woff2") format("woff2"); font-weight: 500; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1200px; height: 630px; overflow: hidden; background: #07070a; }
+body { font-family: "T", sans-serif; color: #ecebe6; -webkit-font-smoothing: antialiased; }
+.og { position: relative; width: 1200px; height: 630px; overflow: hidden; }
+.grid { position: absolute; inset: 0; background-image:
+  linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 56px 56px; -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000 35%, transparent 85%); }
+.glow { position: absolute; border-radius: 50%; filter: blur(110px); background: #00ffc6; }
+.grain { position: absolute; inset: 0; opacity: .08; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+/* portrait: same treatment as the hero (grayscale + teal rim light, faded edges) */
+.portrait { position: absolute; bottom: 0; width: 470px; height: 600px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 64% at 50% 44%, #000 46%, transparent 100%); }
+.portrait img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.15) brightness(.82); }
+.portrait::after { content: ""; position: absolute; inset: 0; mix-blend-mode: color;
+  background: radial-gradient(ellipse at 70% 30%, rgba(0,255,198,.55), transparent 60%); }
+
+.copy { position: absolute; top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; width: 640px; }
+.logo { position: absolute; top: 56px; font-weight: 700; font-size: 30px; letter-spacing: -.04em; direction: ltr; display: inline-flex; align-items: baseline; }
+.logo i { width: 10px; height: 10px; border-radius: 50%; background: #00ffc6; margin-left: 4px; box-shadow: 0 0 14px #00ffc6; }
+.status { display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; font-size: 20px; color: rgba(236,235,230,.75);
+  padding: 9px 18px; border-radius: 99px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.03); margin-bottom: 26px; }
+.status i { width: 9px; height: 9px; border-radius: 50%; background: #00ffc6; box-shadow: 0 0 0 5px rgba(0,255,198,.18); }
+.l1 { font-family: "S", serif; font-size: 92px; line-height: 1.05; color: rgba(236,235,230,.55); }
+.l2 { font-size: 112px; font-weight: 700; line-height: 1.05; letter-spacing: -.02em; }
+.l2 em { font-style: normal; color: #00ffc6; }
+.role { margin-top: 26px; font-size: 30px; font-weight: 500; color: #00ffc6; }
+.meta { margin-top: 10px; font-size: 22px; color: rgba(236,235,230,.55); }
+
+/* direction-specific layout */
+[dir="rtl"] .copy { right: 80px; text-align: right; }
+[dir="rtl"] .logo { right: 80px; }
+[dir="rtl"] .portrait { left: 30px; }
+[dir="ltr"] .copy { left: 80px; }
+[dir="ltr"] .logo { left: 80px; }
+[dir="ltr"] .portrait { right: 30px; }
+[dir="ltr"] .l2 { letter-spacing: -.04em; }
+[dir="ltr"] .l1 { font-size: 84px; }
+</style>
+</head>
+<body>
+<div class="og" id="og">
+  <div class="glow" id="g1" style="width:520px;height:520px;bottom:-260px;opacity:.28"></div>
+  <div class="glow" id="g2" style="width:360px;height:360px;top:-200px;opacity:.14"></div>
+  <div class="grid"></div>
+  <div class="portrait"><img src="../../public/images/yaser.webp" alt=""></div>
+  <div class="logo">YA<i></i></div>
+  <div class="copy">
+    <span class="status"><i></i><span id="status"></span></span>
+    <div class="l1" id="l1"></div>
+    <div class="l2"><span id="l2"></span><em>.</em></div>
+    <div class="role" id="role"></div>
+    <div class="meta" id="meta"></div>
+  </div>
+  <div class="grain"></div>
+</div>
+<script>
+  const T = {
+    ar: { dir: "rtl", status: "متاح لمشاريع جديدة", l1: "أهلًا،", l2: "أنا ياسر", role: "مصمم تجربة وواجهات مستخدم", meta: "+8 سنوات في التصميم · القاهرة" },
+    en: { dir: "ltr", status: "Available for projects", l1: "Hello,", l2: "I'm Yaser", role: "UX/UI Designer", meta: "8+ years in design · Cairo" },
+  };
+  const l = new URLSearchParams(location.search).get("l") || "ar";
+  const t = T[l];
+  document.documentElement.dir = t.dir;
+  document.documentElement.lang = l;
+  for (const k of ["status", "l1", "l2", "role", "meta"]) document.getElementById(k).textContent = t[k];
+  // glows sit behind the portrait side and the text side
+  const g1 = document.getElementById("g1"), g2 = document.getElementById("g2");
+  if (t.dir === "rtl") { g1.style.left = "-120px"; g2.style.right = "-80px"; }
+  else { g1.style.right = "-120px"; g2.style.left = "-80px"; }
+</script>
+</body>
+</html>

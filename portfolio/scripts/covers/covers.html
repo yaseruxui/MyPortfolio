@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8">
+<title>Covers</title>
+<!--
+  Placeholder project covers (typographic series), rendered by
+  scripts/render-covers.mjs → public/images/work/covers/<slug>.webp.
+  Edit the COVERS list below; each entry becomes one <section class="cover">.
+-->
+<style>
+@font-face { font-family: "T"; src: url("../../public/fonts/thmanyahsans-Regular.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "T"; src: url("../../public/fonts/thmanyahsans-Medium.woff2") format("woff2"); font-weight: 500; }
+@font-face { font-family: "T"; src: url("../../public/fonts/thmanyahsans-Black.woff2") format("woff2"); font-weight: 900; }
+@font-face { font-family: "S"; src: url("../../public/fonts/thmanyahserifdisplay-Medium.woff2") format("woff2"); font-weight: 500; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1600px; height: 1000px; overflow: hidden; background: #09090d; }
+body { font-family: "T", sans-serif; color: #f2f0ea; -webkit-font-smoothing: antialiased; }
+
+.cover { position: relative; width: 1600px; height: 1000px; overflow: hidden; display: none;
+  background:
+    radial-gradient(ellipse 60% 70% at 74% 92%, color-mix(in srgb, var(--c1) 55%, transparent), transparent 70%),
+    radial-gradient(ellipse 45% 45% at 12% 6%, color-mix(in srgb, var(--c2) 22%, transparent), transparent 70%),
+    #09090d; }
+.cover.on { display: block; }
+
+/* architectural rings around the letter */
+.rings { position: absolute; left: 1060px; top: 720px; }
+.rings i { position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,.07); transform: translate(-50%, -50%); }
+
+/* the big letter: soft glow + crisp outline */
+.mark, .mark-glow { position: absolute; right: 70px; bottom: -330px; font-weight: 900; font-size: 1040px; line-height: 1; letter-spacing: -.04em; }
+.mark { color: transparent; -webkit-text-stroke: 2px rgba(255,255,255,.22); }
+.mark-glow { background: linear-gradient(160deg, var(--c1), var(--c2)); -webkit-background-clip: text; color: transparent;
+  opacity: .5; filter: blur(2px); -webkit-mask-image: linear-gradient(180deg, #000 10%, transparent 75%); }
+
+/* ============ showcase covers (UI8-style: real screens + copy) ============ */
+.sc { direction: rtl; }
+.sc .bg { position: absolute; inset: 0; }
+.sc .grid { position: absolute; inset: 0; background-image:
+  linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 64px 64px; -webkit-mask-image: radial-gradient(ellipse 70% 80% at 30% 50%, #000 30%, transparent 85%); }
+.sc .screens { position: absolute; inset: 0; }
+.sc .scr { position: absolute; width: 336px; border-radius: 38px; overflow: hidden; background: #fff;
+  box-shadow: 0 50px 100px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.12); }
+.sc .scr img { display: block; width: 100%; }
+/* website showcase: the real page in a browser window that runs off the bottom */
+.sc .tile { position: absolute; border-radius: 22px; overflow: hidden; background: #fff;
+  box-shadow: 0 40px 90px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.1); }
+.sc .tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sc .kicker { align-self: flex-start; margin-bottom: 26px; padding: 10px 18px; border-radius: 99px; font-size: 20px; direction: ltr;
+  color: var(--c1); border: 1px solid color-mix(in srgb, var(--c1) 50%, transparent); background: color-mix(in srgb, var(--c1) 12%, transparent); }
+.sc .browser { position: absolute; border-radius: 22px 22px 0 0; overflow: hidden; background: #fff;
+  box-shadow: 0 60px 120px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.14); }
+.sc .browser .bar { height: 46px; display: flex; align-items: center; gap: 9px; padding: 0 18px; background: #1d1c22; direction: ltr; }
+.sc .browser .bar i { width: 12px; height: 12px; border-radius: 50%; background: #48474f; }
+.sc .browser .bar span { margin: 0 auto; width: 46%; height: 24px; border-radius: 8px; background: #2c2b33; }
+.sc .browser img { display: block; width: 100%; }
+.sc .copy { position: absolute; top: 0; bottom: 0; right: 110px; width: 560px; display: flex; flex-direction: column; justify-content: center; }
+.sc .logo { align-self: flex-start; margin-bottom: 30px; }
+.sc h2 { font-size: 58px; font-weight: 900; line-height: 1.15; letter-spacing: -.01em; }
+.sc p { margin-top: 18px; font-size: 23px; line-height: 1.7; color: rgba(242,240,234,.66); text-wrap: balance; }
+.sc ul { list-style: none; margin-top: 34px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 28px; }
+.sc li { display: flex; align-items: center; gap: 12px; font-size: 21px; font-weight: 500; }
+.sc li i { flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--c1); }
+.sc li i::after { content: ""; width: 11px; height: 6px; border: 2.5px solid #fff; border-top: 0; border-right: 0; transform: translateY(-1px) rotate(-45deg); }
+.sc .tools { display: flex; gap: 12px; margin-top: 36px; }
+.sc .tool { height: 52px; padding: 0 18px 0 8px; border-radius: 14px; display: inline-flex; align-items: center; gap: 12px; font-size: 18px;
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); direction: ltr; }
+.sc .tool b { width: 36px; height: 36px; border-radius: 9px; display: grid; place-items: center; font-weight: 700; font-size: 17px; }
+
+.frame { position: absolute; inset: 40px; border: 1px solid rgba(255,255,255,.08); border-radius: 30px; }
+.grain { position: absolute; inset: 0; opacity: .1; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+</style>
+</head>
+<body>
+<!-- sections are generated below; the render script reads these ids -->
+<section class="cover" id="meetx"></section>
+<section class="cover" id="1min-job-finder"></section>
+<section class="cover" id="cuare"></section>
+<section class="cover" id="ayam-store"></section>
+<section class="cover" id="viola-landing"></section>
+<section class="cover" id="brand-guideline-alshams"></section>
+<section class="cover" id="yaser-ahmed-identity"></section>
+<section class="cover" id="logos-collection"></section>
+<section class="cover" id="social-media-vol1"></section>
+
+<script>
+/* Showcase covers (UI8-style): the real screens cut by crops.mjs into
+   assets/<slug>/, arranged in columns that run off the edges, plus the
+   project's logo, line, documented process steps and tools.
+   screens: [[asset, left, top], ...] — every screen is 336px wide. */
+const TOOLS = {
+  xd: '<span class="tool"><b style="background:#470137;color:#ff61f6">Xd</b>Adobe XD</span>',
+  ae: '<span class="tool"><b style="background:#00005b;color:#9999ff">Ae</b>After Effects</span>',
+  figma: '<span class="tool"><b style="background:#1e1e1e"><svg viewBox="0 0 38 57" width="14" height="21"><path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg></b>Figma</span>',
+};
+const SHOWCASES = {
+  meetx: {
+    c1: "#7b2ff7",
+    bg: "radial-gradient(ellipse 55% 70% at 26% 60%, rgba(123,47,247,.55), transparent 70%), radial-gradient(ellipse 35% 40% at 92% 6%, rgba(240,63,176,.28), transparent 70%), linear-gradient(160deg, #150b2c, #0b0b10 70%)",
+    logoH: 70,
+    title: "اللقاءات والفعاليات",
+    text: "تطبيق موبايل يجمع الناس حول اللقاءات والفعاليات بتجربة حيّة ومليئة بالحركة.",
+    points: ['<bdi dir="ltr">+25</bdi> شاشة', "تطبيق iOS", "بحث وتدفّق المستخدم", "وايرفريم ونماذج تفاعلية"],
+    tools: ["xd", "ae"],
+    screens: [["onboarding", 96, -24], ["meeting", 96, 722], ["home", 466, 210]],
+  },
+  cuare: {
+    c1: "#16c79a",
+    bg: "radial-gradient(ellipse 55% 70% at 26% 58%, rgba(22,199,154,.42), transparent 70%), radial-gradient(ellipse 35% 40% at 92% 6%, rgba(25,69,107,.55), transparent 70%), linear-gradient(160deg, #06201b, #0b0b10 70%)",
+    logoH: 150,
+    title: "الرعاية المنزلية",
+    text: "تطبيق لحجز خدمات الرعاية المنزلية بخطوات بسيطة وواجهة مطمئنة.",
+    points: ["شخصيات المستخدمين", "تدفّق ومعمارية المعلومات", "رسومات أولية ووايرفريم", "نظام ألوان وأيقونات"],
+    tools: ["xd"],
+    screens: [["doctor", 96, -300], ["service", 96, 480], ["caregivers", 466, 128]],
+  },
+  "1min-job-finder": {
+    c1: "#6cc0b5",
+    bg: "radial-gradient(ellipse 55% 70% at 26% 58%, rgba(84,22,104,.75), transparent 70%), radial-gradient(ellipse 35% 40% at 92% 6%, rgba(108,192,181,.3), transparent 70%), linear-gradient(160deg, #1a0a22, #0b0b10 70%)",
+    logoH: 120,
+    logoRadius: 30, // the 1Min mark is its own light tile
+    title: "البحث عن وظيفة",
+    text: "تطبيق للبحث عن الوظائف يختصر الطريق بين الباحث والفرصة في أقل وقت.",
+    points: ["تحليل المنافسين", "شخصيات المستخدمين", "تدفّق ومعمارية المعلومات", "نظام ألوان وخطوط"],
+    tools: ["xd"],
+    screens: [["feed", 96, -270], ["details", 96, 500], ["jobs", 466, 130]],
+  },
+  "ayam-store": {
+    c1: "#0f7a74",
+    bg: "radial-gradient(ellipse 60% 70% at 28% 70%, rgba(15,122,116,.5), transparent 70%), radial-gradient(ellipse 35% 40% at 92% 6%, rgba(170,20,90,.3), transparent 70%), linear-gradient(160deg, #061a19, #0b0b10 70%)",
+    logoH: 120,
+    logoRadius: 60,
+    title: "متجر هدايا إلكتروني",
+    text: "إعادة تصميم الصفحة الرئيسية لمتجر إلكتروني بتجربة تسوق أوضح.",
+    points: ["تحليل التصميم السابق", "واجهة وتجربة جديدة", "واجهة عربية من اليمين", "نظام ألوان وخطوط"],
+    tools: ["xd"],
+    browser: ["page", 80, 150, 820],
+  },
+  "viola-landing": {
+    c1: "#b79a78",
+    bg: "radial-gradient(ellipse 60% 70% at 28% 70%, rgba(183,154,120,.38), transparent 70%), radial-gradient(ellipse 35% 40% at 92% 6%, rgba(255,255,255,.08), transparent 70%), linear-gradient(160deg, #15120f, #0b0b10 70%)",
+    logoH: 46,
+    logoFilter: "invert(1)",
+    title: "متجر أزياء",
+    text: "تصميم صفحة هبوط حديثة تركّز على تحويل الزائر إلى عميل.",
+    points: ["قسم رئيسي يجذب الانتباه", "المجموعات والماركات", "المميزات وطرق الدفع", "الاشتراك بالنشرة البريدية"],
+    tools: ["figma"],
+    browser: ["page", 80, 150, 820],
+  },
+  "yaser-ahmed-identity": {
+    c1: "#b8963f",
+    bg: "radial-gradient(ellipse 60% 70% at 28% 60%, rgba(194,161,95,.32), transparent 70%), linear-gradient(160deg, #17140c, #0b0b10 70%)",
+    kicker: "Yaser Ahmed — Brand Identity",
+    title: "هوية بصرية شخصية",
+    text: "هوية بصرية شخصية من الشعار حتى المطبوعات وتطبيقات الهوية.",
+    points: ["تصميم الشعار", "الألوان والخطوط", "المطبوعات والقرطاسية", "تطبيقات الهوية"],
+    tools: [],
+    tiles: [["stationery", 80, 90, 500, 380], ["cards", 600, 90, 300, 380], ["tablet", 80, 490, 340, 420], ["pattern", 440, 490, 460, 420]],
+  },
+  "logos-collection": {
+    c1: "#7a4cff",
+    bg: "radial-gradient(ellipse 60% 70% at 28% 60%, rgba(122,76,255,.38), transparent 70%), radial-gradient(ellipse 35% 40% at 92% 6%, rgba(255,79,163,.22), transparent 70%), linear-gradient(160deg, #120c24, #0b0b10 70%)",
+    kicker: "Logofolio",
+    title: "مجموعة شعارات",
+    text: "مجموعة شعارات لعلامات تجارية من مجالات مختلفة.",
+    points: ["مجالات مختلفة", "عربي وإنجليزي"],
+    tools: [],
+    tiles: [["l1", 80, 70, 400, 270], ["l2", 500, 70, 400, 270], ["l3", 80, 360, 400, 270], ["l4", 500, 360, 400, 270], ["l5", 80, 650, 400, 270], ["l6", 500, 650, 400, 270]],
+  },
+  "brand-guideline-alshams": {
+    c1: "#e0b400",
+    bg: "radial-gradient(ellipse 60% 70% at 28% 60%, rgba(245,196,0,.28), transparent 70%), linear-gradient(160deg, #18160a, #0b0b10 70%)",
+    kicker: "Al Shams Stationery",
+    title: "دليل الهوية البصرية",
+    text: "دليل هوية بصرية متكامل لقرطاسية الشمس — الشعار والألوان والخطوط وتطبيقاتها.",
+    points: ["الشعار واستخداماته", "نظام الألوان", "الخطوط", "تطبيقات الهوية"],
+    tools: [],
+    tiles: [["cover", 80, 90, 820, 430], ["open", 80, 540, 400, 380], ["swatches", 500, 540, 400, 380]],
+  },
+  "social-media-vol1": {
+    c1: "#a23fe0",
+    bg: "radial-gradient(ellipse 60% 70% at 28% 55%, rgba(162,63,224,.5), transparent 70%), radial-gradient(ellipse 35% 40% at 92% 6%, rgba(255,194,26,.18), transparent 70%), linear-gradient(160deg, #170b22, #0b0b10 70%)",
+    kicker: "Social Media Vol.1",
+    title: "تصاميم سوشيال ميديا",
+    text: "مجموعة تصاميم لمنصات التواصل الاجتماعي لعلامات تجارية مختلفة.",
+    points: ["منشورات إنستغرام", "علامات مختلفة", "المواسم والمناسبات"],
+    tools: [],
+    tiles: [["p1", 80, 100, 260, 370], ["p2", 360, 100, 260, 370], ["p3", 640, 100, 260, 370], ["p4", 80, 500, 260, 370], ["p5", 360, 500, 260, 370], ["p6", 640, 500, 260, 370]],
+  },
+};
+const COVERS = {
+};
+
+for (const [id, s] of Object.entries(SHOWCASES)) {
+  const el = document.getElementById(id);
+  el.classList.add("sc");
+  el.style.setProperty("--c1", s.c1);
+  el.innerHTML = `
+    <div class="bg" style="background:${s.bg}"></div>
+    <div class="grid"></div>
+    ${s.tiles
+      ? `<div class="screens">${s.tiles
+          .map(([a, l, t, w, hh]) => `<div class="tile" style="left:${l}px;top:${t}px;width:${w}px;height:${hh}px"><img src="assets/${id}/${a}.png" alt=""></div>`)
+          .join("")}</div>`
+      : s.browser
+      ? `<div class="browser" style="left:${s.browser[1]}px;top:${s.browser[2]}px;width:${s.browser[3]}px"><div class="bar"><i></i><i></i><i></i><span></span></div><img src="assets/${id}/${s.browser[0]}.png" alt=""></div>`
+      : `<div class="screens">${s.screens
+          .map(([a, l, t]) => `<div class="scr" style="left:${l}px;top:${t}px"><img src="assets/${id}/${a}.png" alt=""></div>`)
+          .join("")}</div>`}
+    <div class="copy">
+      ${s.kicker ? `<span class="kicker">${s.kicker}</span>` : ""}
+      ${s.kicker ? "" : `<img class="logo" src="assets/${id}/logo.png" alt="" style="height:${s.logoH}px;border-radius:${s.logoRadius || 0}px;filter:${s.logoFilter || "none"}">`}
+      <h2>${s.title}</h2>
+      <p>${s.text}</p>
+      <ul>${s.points.map((p) => `<li><i></i><span>${p}</span></li>`).join("")}</ul>
+      <div class="tools">${s.tools.map((t) => TOOLS[t]).join("")}</div>
+    </div>
+    <div class="grain"></div>`;
+}
+
+const rings = [260, 420, 600, 800, 1020].map((d) => `<i style="width:${d}px;height:${d}px"></i>`).join("");
+for (const [id, c] of Object.entries(COVERS)) {
+  const el = document.getElementById(id);
+  el.style.setProperty("--c1", c.c1);
+  el.style.setProperty("--c2", c.c2);
+  el.innerHTML = `
+    <div class="rings">${rings}</div>
+    <div class="mark-glow">${c.mark}</div><div class="mark">${c.mark}</div>
+    <div class="frame"></div>
+    <div class="grain"></div>`;
+}
+const id = new URLSearchParams(location.search).get("c") || "meetx";
+document.getElementById(id)?.classList.add("on");
+</script>
+</body>
+</html>

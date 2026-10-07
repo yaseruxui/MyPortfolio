@@ -1,0 +1,219 @@
+[
+  {
+    "slug": "meetx",
+    "type": "app",
+    "title": "Meetx",
+    "year": 2021,
+    "link": "https://www.behance.net/gallery/128451903/Meetx-UXUI-Mobile-App-Design",
+    "images": {
+      "cover": "images/work/meetx.jpg",
+      "thumb": "images/work/covers/meetx.webp",
+      "card": "images/work/meetx/1.webp",
+      "cardPosition": "left center",
+      "gallery": [
+        "images/work/meetx/1.webp",
+        "images/work/meetx/2.webp",
+        "images/work/meetx/3.webp",
+        "images/work/meetx/4.webp"
+      ]
+    },
+    "study": {
+      "ar": {
+        "tagline": "تطبيق موبايل يجمع الناس حول اللقاءات والفعاليات بتجربة حيّة ومليئة بالحركة.",
+        "role": "مصمم UX/UI",
+        "tools": "Adobe XD · After Effects",
+        "team": "فريق من 6 مصممين",
+        "overview": "Meetx تطبيق تواصل اجتماعي يسهّل تنظيم اللقاءات والفعاليات والانضمام إليها. عملت ضمن فريق على بناء تجربة المستخدم والواجهات، مع التركيز على تدفّق واضح وحركات تفاعلية تجعل التصفّح ممتعًا. صُمّم بالكامل على Adobe XD مع حركات بصرية على After Effects."
+      },
+      "en": {
+        "tagline": "A mobile app that brings people together around meetups and events, with a lively, motion-rich experience.",
+        "role": "UX/UI Designer",
+        "tools": "Adobe XD · After Effects",
+        "team": "Team of 6 designers",
+        "overview": "Meetx is a social app that makes it easy to organize, discover and join meetups and events. I worked within a team on the user experience and interface, focusing on a clear flow and interactive motion that makes browsing enjoyable. Designed end-to-end in Adobe XD with visual motion in After Effects."
+      }
+    }
+  },
+  {
+    "slug": "cuare",
+    "type": "app",
+    "title": "Cuare",
+    "year": 2021,
+    "link": "https://www.behance.net/gallery/125629789/Cuare-UXUI-Mobile-App",
+    "images": {
+      "cover": "images/work/cuare.png",
+      "thumb": "images/work/covers/cuare.webp",
+      "gallery": [
+        "images/work/cuare/1.webp",
+        "images/work/cuare/2.webp",
+        "images/work/cuare/3.webp",
+        "images/work/cuare/4.webp"
+      ]
+    },
+    "study": {
+      "ar": {
+        "tagline": "تطبيق لحجز خدمات الرعاية المنزلية بخطوات بسيطة وواجهة مطمئنة.",
+        "role": "مصمم UX/UI",
+        "tools": "Adobe XD",
+        "team": "مشروع فردي",
+        "overview": "Cuare تطبيق موبايل لحجز خدمات الرعاية المنزلية والصحية. ركّزت في التصميم على البساطة والوضوح ليستخدمه الجميع بسهولة، مع واجهة هادئة وألوان مريحة وتدفّق حجز سريع من اختيار الخدمة حتى التأكيد."
+      },
+      "en": {
+        "tagline": "An app for booking home-care services in a few simple, reassuring steps.",
+        "role": "UX/UI Designer",
+        "tools": "Adobe XD",
+        "team": "Solo project",
+        "overview": "Cuare is a mobile app for booking home and health-care services. I focused the design on simplicity and clarity so anyone can use it with ease — a calm interface, comfortable colors and a quick booking flow from choosing a service to confirmation."
+      }
+    }
+  },
+  {
+    "slug": "1min-job-finder",
+    "type": "app",
+    "title": "1Min — Job Finder",
+    "year": 2022,
+    "link": "https://www.behance.net/gallery/143023529/1Min-Job-Finder-UXUI-Mobile-App-Design",
+    "images": {
+      "cover": "images/work/1min.jpg",
+      "thumb": "images/work/covers/1min-job-finder.webp",
+      "card": "images/work/1min/1.webp",
+      "cardPosition": "top",
+      "gallery": [
+        "images/work/1min/1.webp",
+        "images/work/1min/2.webp",
+        "images/work/1min/3.webp",
+        "images/work/1min/4.webp"
+      ]
+    },
+    "study": {
+      "ar": {
+        "tagline": "تطبيق للبحث عن الوظائف يختصر الطريق بين الباحث والفرصة في أقل وقت.",
+        "role": "مصمم UX/UI",
+        "tools": "Adobe XD",
+        "team": "مشروع فردي",
+        "overview": "1Min تطبيق للبحث عن الوظائف يركّز على السرعة — كما يوحي اسمه. صمّمت تجربة تختصر الخطوات بين الباحث عن عمل والفرصة المناسبة، ببحث وفلترة واضحين وملف تعريفي بسيط وتقديم سريع على الوظائف."
+      },
+      "en": {
+        "tagline": "A job-finding app that shortens the path between a seeker and the right opportunity.",
+        "role": "UX/UI Designer",
+        "tools": "Adobe XD",
+        "team": "Solo project",
+        "overview": "1Min is a job-search app built around speed — as the name suggests. I designed an experience that shortens the steps between a job seeker and the right opportunity, with clear search and filtering, a simple profile and fast one-tap applying."
+      }
+    }
+  },
+  {
+    "slug": "ayam-store",
+    "type": "web",
+    "title": "AYAM Store",
+    "year": 2022,
+    "link": "https://www.behance.net/gallery/129732471/AYAM-STORE-Home-Page-Redesign",
+    "images": {
+      "cover": "images/work/ayam.jpg",
+      "thumb": "images/work/covers/ayam-store.webp"
+    },
+    "ar": {
+      "category": "موقع إلكتروني · إعادة تصميم",
+      "summary": "إعادة تصميم الصفحة الرئيسية لمتجر إلكتروني بتجربة تسوق أوضح."
+    },
+    "en": {
+      "category": "Website · Redesign",
+      "summary": "Home page redesign for an online store with a clearer shopping experience."
+    }
+  },
+  {
+    "slug": "viola-landing",
+    "type": "web",
+    "title": "VIOLA",
+    "year": 2022,
+    "link": "https://www.behance.net/gallery/127988644/VIOLA-Landing-Page",
+    "images": {
+      "cover": "images/work/viola.jpg",
+      "thumb": "images/work/covers/viola-landing.webp"
+    },
+    "ar": {
+      "category": "صفحة هبوط · واجهة ويب",
+      "summary": "تصميم صفحة هبوط حديثة تركّز على تحويل الزائر إلى عميل."
+    },
+    "en": {
+      "category": "Landing Page · Web",
+      "summary": "A modern landing page designed to turn visitors into customers."
+    }
+  },
+  {
+    "slug": "brand-guideline-alshams",
+    "type": "brand",
+    "title": "Al Shams — Brand Guideline",
+    "year": 2021,
+    "link": "https://www.behance.net/gallery/120000713/Brand-Guideline-",
+    "images": {
+      "cover": "images/work/brandguide.jpg",
+      "thumb": "images/work/covers/brand-guideline-alshams.webp"
+    },
+    "ar": {
+      "category": "هوية بصرية · دليل الهوية",
+      "summary": "دليل هوية بصرية متكامل لقرطاسية الشمس — الشعار والألوان والخطوط وتطبيقاتها."
+    },
+    "en": {
+      "category": "Brand Identity · Guideline",
+      "summary": "A complete brand guideline for Al Shams Stationery — logo, colors, type and applications."
+    }
+  },
+  {
+    "slug": "yaser-ahmed-identity",
+    "type": "brand",
+    "title": "Yaser Ahmed — Brand Identity",
+    "year": 2020,
+    "link": "https://www.behance.net/gallery/107255171/Yaser-Ahmed-Brand-Identity",
+    "images": {
+      "cover": "images/work/yaserahmed.jpg",
+      "thumb": "images/work/covers/yaser-ahmed-identity.webp"
+    },
+    "ar": {
+      "category": "هوية بصرية · هوية شخصية",
+      "summary": "هوية بصرية شخصية من الشعار حتى المطبوعات وتطبيقات الهوية."
+    },
+    "en": {
+      "category": "Brand Identity · Personal",
+      "summary": "A personal brand identity, from the logo to print and brand applications."
+    }
+  },
+  {
+    "slug": "logos-collection",
+    "type": "brand",
+    "title": "Logos Collection",
+    "year": 2021,
+    "link": "https://www.behance.net/gallery/125410789/Collection-LOGOS",
+    "images": {
+      "cover": "images/work/logos.jpg",
+      "thumb": "images/work/covers/logos-collection.webp"
+    },
+    "ar": {
+      "category": "شعارات",
+      "summary": "مجموعة شعارات لعلامات تجارية من مجالات مختلفة."
+    },
+    "en": {
+      "category": "Logo Design",
+      "summary": "A collection of logos for brands across different industries."
+    }
+  },
+  {
+    "slug": "social-media-vol1",
+    "type": "brand",
+    "title": "Social Media Vol.1",
+    "year": 2021,
+    "link": "https://www.behance.net/gallery/112458823/SOCIAL-MEDIA-Vol1",
+    "images": {
+      "cover": "images/work/social.jpg",
+      "thumb": "images/work/covers/social-media-vol1.webp"
+    },
+    "ar": {
+      "category": "تصاميم سوشيال ميديا",
+      "summary": "مجموعة تصاميم لمنصات التواصل الاجتماعي لعلامات تجارية مختلفة."
+    },
+    "en": {
+      "category": "Social Media Design",
+      "summary": "A set of social media designs for a range of brands."
+    }
+  }
+]

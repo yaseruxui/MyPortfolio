@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-next",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 4330
+    },
+    {
+      "name": "portfolio-prod",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "start"],
+      "port": 4330
+    },
+    {
+      "name": "inspiration",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["inspiration/serve.mjs"],
+      "port": 4340
+    }
+  ]
+}

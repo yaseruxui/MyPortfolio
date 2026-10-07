@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "name": "Yaser",
+    "title": "Yaser — UX/UI Designer",
+    "desc": "UX/UI designer crafting digital products that feel inevitable."
+  },
+  "loader": {
+    "a": "Portfolio ©2026",
+    "b": "Loading experience"
+  },
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "process": "Process",
+    "contact": "Contact",
+    "cv": "Résumé",
+    "status": "Available for projects",
+    "menu": "Menu",
+    "close": "Close menu",
+    "reach": "Get in touch",
+    "follow": "Follow",
+    "lang": "عربي"
+  },
+  "cursor": {
+    "view": "View",
+    "hi": "Say hi",
+    "next": "Next"
+  },
+  "hero": {
+    "l1": "Hello",
+    "l2": "I'm Yaser",
+    "intro": "I design digital products that feel <em class=\"serif\">inevitable</em> — clear systems, sharp interfaces and motion with intent.",
+    "scroll": "SCROLL TO EXPLORE · SCROLL TO EXPLORE · ",
+    "scrollLabel": "Scroll",
+    "ctaWork": "View my work"
+  },
+  "marquee": [
+    "Product Design",
+    "Design Systems",
+    "UX Research",
+    "Prototyping",
+    "Motion",
+    "Web & Mobile"
+  ],
+  "marqueeHighlight": "AI Products",
+  "about": {
+    "label": "About",
+    "text": "A UX/UI designer with <b>6+ years</b> designing mobile apps, web apps, systems <b>and AI-powered products.</b>I've helped products across more than one country grow through clear experiences that serve users and business goals — from research and idea to the last detail in the interface.",
+    "s": [
+      "+ Years designing",
+      "Shipped products",
+      "Countries served"
+    ],
+    "metrics": [
+      {
+        "value": "48",
+        "affix": "+",
+        "label": "Projects shipped"
+      },
+      {
+        "value": "6",
+        "affix": "+",
+        "label": "Years in UX/UI"
+      },
+      {
+        "value": "4",
+        "affix": "",
+        "label": "Companies worked with"
+      },
+      {
+        "value": "24",
+        "affix": "h",
+        "label": "Response time"
+      }
+    ]
+  },
+  "work": {
+    "label": "Selected Work",
+    "t1": "Selected",
+    "t2": "work",
+    "more": "More work<br />on request.",
+    "talk": "Let's talk",
+    "tabs": {
+      "all": "All",
+      "app": "Apps",
+      "web": "Web",
+      "brand": "Branding"
+    },
+    "type": {
+      "app": "Mobile app",
+      "web": "Website",
+      "brand": "Brand identity"
+    },
+    "viewAll": "View all work",
+    "caseStudy": "Case study",
+    "allLabel": "(All work)",
+    "allT1": "All",
+    "allT2": "work"
+  },
+  "process": {
+    "label": "Process",
+    "t1": "How I",
+    "t2": "work",
+    "steps": [
+      {
+        "t": "Discover",
+        "d": "Stakeholder talks, user interviews, audits and competitive analysis. Understanding the real problem before drawing a single box.",
+        "tags": [
+          "Research",
+          "Personas",
+          "Journey maps"
+        ]
+      },
+      {
+        "t": "Define",
+        "d": "Information architecture, user flows and wireframes that turn insight into structure — tested early, changed cheaply.",
+        "tags": [
+          "IA",
+          "User flows",
+          "Wireframes"
+        ]
+      },
+      {
+        "t": "Design",
+        "d": "High-fidelity interfaces, interaction details and a design system that keeps every screen consistent as the product grows.",
+        "tags": [
+          "UI",
+          "Design systems",
+          "Prototypes"
+        ]
+      },
+      {
+        "t": "Deliver",
+        "d": "Developer-ready handoff, QA with engineers and post-launch iteration driven by real usage data.",
+        "tags": [
+          "Handoff",
+          "QA",
+          "Iteration"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "l1": "Have an idea?",
+    "l2": "Let's make it real.",
+    "btn": "Get in touch",
+    "whatsapp": "WhatsApp",
+    "cv": "Download CV",
+    "reply": "I usually reply within 24 hours",
+    "mailHint": "Write to me",
+    "copy": "Copy",
+    "copied": "Copied"
+  },
+  "footer": {
+    "rights": "© 2026 Yaser",
+    "city": "Cairo",
+    "top": "Back to top ↑"
+  },
+  "case": {
+    "back": "All work",
+    "role": "Role",
+    "timeline": "Timeline",
+    "team": "Team",
+    "tools": "Tools",
+    "year": "Year",
+    "gallery": "Gallery",
+    "viewProject": "View the full project on Behance",
+    "appStore": "App Store ↗",
+    "googlePlay": "Google Play ↗",
+    "overview": "Overview",
+    "challenge": "The challenge",
+    "goals": "Goals",
+    "process": "Process",
+    "solution": "The solution",
+    "results": "Results",
+    "next": "Next project"
+  },
+  "testimonials": {
+    "label": "Testimonials",
+    "t1": "What clients",
+    "t2": "say",
+    "desc": "Words from people I've worked with, on the process and the outcome."
+  },
+  "faq": {
+    "label": "FAQ",
+    "t1": "Frequent",
+    "t2": "questions",
+    "items": [
+      {
+        "q": "What makes you different?",
+        "a": "I combine UX with visual identity, and stay with the project from research to developer-ready handoff, so nothing gets lost between design and build."
+      },
+      {
+        "q": "What do you work on?",
+        "a": "Mobile apps, web apps, design systems and visual identity — from research to the last detail."
+      },
+      {
+        "q": "How long does a project take?",
+        "a": "Depends on scope, but I set a clear timeline up front and stick to it."
+      },
+      {
+        "q": "What language do we talk in?",
+        "a": "Arabic or English — whichever suits you."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The link may be broken, or the page has moved.",
+    "back": "Back home"
+  }
+}
