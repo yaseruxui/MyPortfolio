@@ -6,6 +6,9 @@ import { TOOL_PATHS } from "@/content/tool-icons";
 const ADOBE: Record<string, { code: string; hex: string }> = {
   "Adobe XD": { code: "Xd", hex: "#FF61F6" },
   Illustrator: { code: "Ai", hex: "#FF9A00" },
+  "After Effects": { code: "Ae", hex: "#9999FF" },
+  Photoshop: { code: "Ps", hex: "#31A8FF" },
+  InDesign: { code: "Id", hex: "#FF3366" },
 };
 
 /**

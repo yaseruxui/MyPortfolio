@@ -6,34 +6,99 @@
 [dir="rtl"] .read-progress span { transform-origin: right; }
 
 /* ---------- hero ---------- */
-.c-hero { position: relative; z-index: 2; padding: 130px var(--gutter) 72px; }
-.c-hero__top { display: flex; justify-content: space-between; color: var(--muted); margin-bottom: 8vh; }
-.c-hero__cat { color: var(--neon); margin-bottom: 18px; }
+.c-hero { position: relative; z-index: 2; padding: 104px var(--gutter) 44px; }
+.c-hero__top { display: flex; justify-content: space-between; color: var(--muted); margin-bottom: 44px; }
+.c-hero__cat { color: var(--neon); margin-bottom: 12px; }
 .c-hero__title {
   font-family: var(--f-display);
-  font-size: clamp(64px, 13vw, 230px); font-weight: 700; line-height: 0.88; letter-spacing: -0.055em;
+  font-size: clamp(44px, 7vw, 104px); font-weight: 700; line-height: 0.95; letter-spacing: -0.045em;
 }
 [dir="rtl"] .c-hero__title { text-align: right; }
 .c-hero__tagline {
   font-family: var(--f-serif); font-weight: 300; color: #c9c8c2;
-  font-size: clamp(24px, 2.8vw, 44px); line-height: 1.25; max-width: 900px; margin-top: 28px;
+  font-size: clamp(18px, 1.7vw, 26px); line-height: 1.4; max-width: 760px; margin-top: 16px;
 }
-html[lang="ar"] .c-hero__tagline { font-style: normal; line-height: 1.6; }
+html[lang="ar"] .c-hero__tagline { font-style: normal; line-height: 1.7; }
+/* flex, not a fixed grid: a project may show one fact or three.
+   One gap value throughout, so year / tools / links read evenly spaced. */
 .c-meta {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
-  margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px 56px;
+  margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--line);
 }
-.c-meta dt { color: var(--muted); margin-bottom: 10px; }
+.c-meta > div { min-height: 58px; }
+.c-meta dt { color: var(--muted); margin-bottom: 12px; }
 .c-meta dd { font-size: 15px; line-height: 1.6; }
+
+/* tools: a mark beside each name */
+.c-meta__tools dd { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; }
+.c-tool { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+/* monochrome until hovered, matching .cv-tool */
+.c-tool svg { width: 17px; height: 17px; flex: none; color: var(--muted); transition: color 0.35s var(--ease); }
+.c-tool:hover svg { color: var(--brand, var(--neon)); }
+
+/* links: icon buttons sized to sit on the same baseline as the text rows */
+.c-meta__links dd { margin-top: -4px; }
+.c-meta__links .plinks { gap: 8px; }
+.c-meta__links .plink { width: 36px; height: 36px; border-radius: 11px; }
+.c-meta__links .plink svg { width: 16px; height: 16px; }
 
 /* ---------- images ---------- */
 .c-cover, .c-wide, .c-full { position: relative; z-index: 2; overflow: hidden; background: var(--bg-2); }
-.c-cover { height: 92svh; }
+.c-cover { height: 58svh; }
 .c-cover img, .c-wide img, .c-full img { width: 100%; height: 100%; object-fit: cover; }
 .c-cover img { filter: brightness(0.85); }
 .c-wide { height: 80svh; margin-top: 40px; }
 .c-wide img, .c-full img { height: 124%; margin-top: -12%; filter: brightness(0.7) saturate(0.85); }
 .c-full { height: 100svh; }
+
+/* ---------- body: content + sticky links/CTA ---------- */
+.c-body {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: minmax(0, 1fr) 300px;
+  gap: clamp(32px, 4vw, 72px);
+  padding-inline: var(--gutter);
+  /* the sticky column pins to this box's bottom edge — without room here the
+     CTA card ends up flush against the "next project" section */
+  padding-bottom: clamp(100px, 13vh, 170px);
+  align-items: start;
+}
+.c-body__main { min-width: 0; }
+/* sections inside the two-column body supply their own gutter */
+.c-sec--flush, .c-body .c-gallery { padding-inline: 0; }
+
+.c-aside { position: sticky; top: 104px; }
+.c-aside__inner { display: flex; flex-direction: column; gap: 28px; padding-top: 150px; }
+
+/* link icons */
+.plinks { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0; }
+.plink {
+  display: grid; place-items: center; width: 44px; height: 44px;
+  border-radius: 14px; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.03);
+  color: var(--muted); transition: 0.35s var(--ease);
+}
+.plink svg { width: 19px; height: 19px; fill: currentColor; }
+.plink:hover {
+  color: var(--bg); background: var(--neon); border-color: transparent;
+  transform: translateY(-3px); box-shadow: 0 10px 24px rgba(var(--neon-rgb), 0.3);
+}
+
+/* "liked this project?" */
+.c-cta {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+  padding: 24px; border-radius: 20px;
+  border: 1px solid var(--line);
+  background: linear-gradient(160deg, rgba(var(--neon-rgb), 0.07), transparent 65%), var(--bg-2);
+}
+.c-cta__q { font-size: 19px; font-weight: 600; }
+.c-cta__txt { font-size: 13.5px; line-height: 1.7; color: var(--muted); margin-bottom: 6px; }
+.c-cta .btn { white-space: nowrap; }
+
+@media (max-width: 1100px) {
+  .c-body { grid-template-columns: 1fr; }
+  .c-aside { position: static; }
+  .c-aside__inner { padding-top: 0; padding-bottom: 90px; }
+  .c-cta { width: 100%; }
+}
 
 /* ---------- generic section ---------- */
 .c-sec {
@@ -133,7 +198,7 @@ html[lang="ar"] .c-quote p { line-height: 1.7; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
-  .c-meta { grid-template-columns: 1fr 1fr; }
+  .c-meta { gap: 20px 36px; }
   .c-cover { height: 60svh; }
   .c-wide { height: 50svh; }
   .c-full { height: 60svh; }
@@ -158,12 +223,5 @@ html[lang="ar"] .c-quote p { line-height: 1.7; }
 }
 .c-gallery .c-shot img { width: 100%; height: auto; object-fit: cover; display: block; }
 
-/* view-on-behance CTA */
-.c-behance {
-  position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 14px;
-  margin: 20px var(--gutter) 40px; padding: 60px 32px; text-align: center;
-  border: 1px dashed var(--line); border-radius: 18px; transition: border-color 0.4s, background 0.4s;
-}
-.c-behance:hover { border-color: rgba(var(--neon-rgb), 0.5); background: rgba(var(--neon-rgb), 0.03); }
-.c-behance .mono { color: var(--neon); }
-.c-behance__txt { font-size: clamp(22px, 3vw, 40px); font-weight: 600; letter-spacing: -0.03em; max-width: 700px; }
+/* the old full-width "view on Behance" block and the store buttons are gone —
+   outward links now live as icons in the sticky aside (.c-aside__links). */

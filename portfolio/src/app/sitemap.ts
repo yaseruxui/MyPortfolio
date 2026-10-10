@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
-import { CASE_STUDIES } from "@/content/projects";
+import { PUBLIC_PROJECTS } from "@/content/projects";
 import { SITE_URL, alternatesFor } from "@/lib/site-url";
 
 /** /sitemap.xml — every page in both languages, cross-linked with hreflang. */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ["", "/work", "/cv", ...CASE_STUDIES.map((p) => `/work/${p.slug}`)];
+  const paths = ["", "/work", "/cv", ...PUBLIC_PROJECTS.map((p) => `/work/${p.slug}`)];
   const abs = (p: string) => `${SITE_URL}${p === "/" ? "" : p}`;
 
   return paths.flatMap((path) => {

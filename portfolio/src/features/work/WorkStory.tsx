@@ -72,9 +72,11 @@ export function WorkStory() {
                   <TransitionLink href={href} className="btn btn--solid magnetic">
                     <span>{t("caseStudy")}</span> <i aria-hidden="true">{arrow}</i>
                   </TransitionLink>
-                  <a href={p.link} className="btn magnetic" target="_blank" rel="noopener">
-                    <span dir="ltr">Behance ↗</span>
-                  </a>
+                  {p.links?.behance && (
+                    <a href={p.links.behance} className="btn magnetic" target="_blank" rel="noopener">
+                      <span dir="ltr">Behance ↗</span>
+                    </a>
+                  )}
                 </div>
               </div>
 

@@ -93,6 +93,21 @@
     },
     "viewAll": "عرض كل الأعمال",
     "caseStudy": "دراسة الحالة",
+    "featured": "مميز",
+    "nda": "تحت اتفاقية سرية",
+    "ndaHint": "التفاصيل متاحة عند الطلب",
+    "ndaUnlockCta": "اضغط لإدخال كلمة السر",
+    "ndaTitle": "محتوى محمي",
+    "ndaDesc": "مشروع «{title}» تحت اتفاقية سرية. أدخل كلمة السر للاطلاع عليه.",
+    "ndaPassword": "كلمة السر",
+    "ndaSubmit": "فتح",
+    "ndaWhatsapp": "اطلب كلمة السر عبر واتساب",
+    "ndaWaMsg": "مرحبًا ياسر، أود الاطلاع على مشروع «{title}» المحمي. ممكن كلمة السر؟",
+    "ndaWrong": "كلمة السر غير صحيحة.",
+    "ndaTooMany": "محاولات كثيرة. حاول بعد قليل.",
+    "ndaOpen": "فتح المشروع",
+    "ndaExpires": "ينتهي الوصول خلال",
+    "ndaClose": "إغلاق",
     "allLabel": "(جميع الأعمال)",
     "allT1": "كل",
     "allT2": "الأعمال"
@@ -165,16 +180,18 @@
     "tools": "الأدوات",
     "year": "السنة",
     "gallery": "من التصميم",
-    "viewProject": "شاهد المشروع كاملًا على Behance",
-    "appStore": "App Store ↗",
-    "googlePlay": "Google Play ↗",
     "overview": "نظرة عامة",
     "challenge": "التحدي",
     "goals": "الأهداف",
     "process": "المنهجية",
     "solution": "الحل",
     "results": "النتائج",
-    "next": "المشروع التالي"
+    "next": "المشروع التالي",
+    "projectLinks": "روابط المشروع",
+    "ctaTitle": "عجبك المشروع؟",
+    "ctaText": "أقدر أصمّم لك شيئًا مشابهًا يناسب علامتك.",
+    "ctaBtn": "اطلب عمل مماثل",
+    "ctaWa": "مرحبًا ياسر، عجبني مشروع «{title}» وأرغب في عمل مماثل."
   },
   "testimonials": {
     "label": "آراء العملاء",
@@ -209,5 +226,15 @@
     "title": "الصفحة غير موجودة",
     "text": "يبدو أن الرابط غير صحيح أو أن الصفحة نُقلت.",
     "back": "العودة للرئيسية"
+  },
+  "links": {
+    "website": "الموقع المباشر",
+    "behance": "Behance",
+    "dribbble": "Dribbble",
+    "figma": "Figma",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "github": "GitHub",
+    "youtube": "YouTube"
   }
 }

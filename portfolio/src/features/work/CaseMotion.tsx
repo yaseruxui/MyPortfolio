@@ -117,12 +117,14 @@ export function CaseMotion() {
         );
     });
 
-    gsap.from(".c-behance", {
-      y: 40,
+    gsap.from(".c-aside__inner > *", {
+      y: 24,
       opacity: 0,
-      duration: 1,
+      duration: 0.9,
       ease: "power3.out",
-      scrollTrigger: { trigger: ".c-behance", start: "top 88%" },
+      stagger: 0.1,
+      clearProps: "opacity,transform",
+      scrollTrigger: { trigger: ".c-body", start: "top 80%" },
     });
     titleReveals(".c-next__title");
 

@@ -93,6 +93,21 @@
     },
     "viewAll": "View all work",
     "caseStudy": "Case study",
+    "featured": "Featured",
+    "nda": "Under NDA",
+    "ndaHint": "Details available on request",
+    "ndaUnlockCta": "Click to enter the password",
+    "ndaTitle": "Protected content",
+    "ndaDesc": "“{title}” is under an NDA. Enter the password to view it.",
+    "ndaPassword": "Password",
+    "ndaSubmit": "Unlock",
+    "ndaWhatsapp": "Request the password on WhatsApp",
+    "ndaWaMsg": "Hi Yaser, I'd like to view your protected project “{title}”. Could you share the password?",
+    "ndaWrong": "That password is not correct.",
+    "ndaTooMany": "Too many attempts. Please try again later.",
+    "ndaOpen": "Open project",
+    "ndaExpires": "Access expires in",
+    "ndaClose": "Close",
     "allLabel": "(All work)",
     "allT1": "All",
     "allT2": "work"
@@ -165,16 +180,18 @@
     "tools": "Tools",
     "year": "Year",
     "gallery": "Gallery",
-    "viewProject": "View the full project on Behance",
-    "appStore": "App Store ↗",
-    "googlePlay": "Google Play ↗",
     "overview": "Overview",
     "challenge": "The challenge",
     "goals": "Goals",
     "process": "Process",
     "solution": "The solution",
     "results": "Results",
-    "next": "Next project"
+    "next": "Next project",
+    "projectLinks": "Project links",
+    "ctaTitle": "Like this project?",
+    "ctaText": "I can design something similar, tailored to your brand.",
+    "ctaBtn": "Request similar work",
+    "ctaWa": "Hi Yaser, I liked your «{title}» project and would like something similar."
   },
   "testimonials": {
     "label": "Testimonials",
@@ -209,5 +226,15 @@
     "title": "Page not found",
     "text": "The link may be broken, or the page has moved.",
     "back": "Back home"
+  },
+  "links": {
+    "website": "Live site",
+    "behance": "Behance",
+    "dribbble": "Dribbble",
+    "figma": "Figma",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "github": "GitHub",
+    "youtube": "YouTube"
   }
 }

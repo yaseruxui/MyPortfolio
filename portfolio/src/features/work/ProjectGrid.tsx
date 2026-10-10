@@ -7,13 +7,10 @@ import { PROJECTS, projectCategory } from "@/content/projects";
 import type { Locale, ProjectType } from "@/types/content";
 import { img } from "@/utils/img";
 import { TransitionLink } from "@/components/ui/TransitionLink";
+import { NdaCard, NdaCountdown, NdaModal, useNdaAccess } from "./NdaGate";
 
 const pad = (n: number) => String(n).padStart(2, "0");
 const TYPE_ORDER: ProjectType[] = ["app", "web", "brand"];
-/* bento rhythm: a wide card (2×2) beside two stacked small cards, mirrored
-   on the next pair of rows. Every card keeps the covers' 16:10 ratio, and
-   with dense flow 9 projects fill the grid exactly. */
-const BENTO = ["wide", "", "", "", "wide", ""];
 
 /**
  * Filterable project grid (tabs pill + animated filtering + 3D tilt cards).
@@ -27,6 +24,7 @@ export function ProjectGrid({ header }: { header: ReactNode }) {
   const locale = useLocale() as Locale;
   const wrapRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
+  const nda = useNdaAccess();
 
   const types: Array<"all" | ProjectType> = [
     "all",
@@ -78,11 +76,19 @@ export function ProjectGrid({ header }: { header: ReactNode }) {
               c.classList.toggle("is-hidden", f !== "all" && c.dataset.type !== f),
             );
             const shown = cards.filter((c) => !c.classList.contains("is-hidden"));
-            shown.forEach((c, i) => (c.dataset.size = BENTO[i % BENTO.length]));
             gsap.fromTo(
               shown,
-              { opacity: 0, y: 30 },
-              { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", stagger: 0.07 },
+              { opacity: 0, y: 18 },
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.6,
+                ease: "power3.out",
+                stagger: 0.05,
+                // same reason as ArchiveMotion: a left-over inline transform
+                // would override the card's :hover lift
+                clearProps: "opacity,transform",
+              },
             );
             ScrollTrigger.refresh();
           },
@@ -104,7 +110,9 @@ export function ProjectGrid({ header }: { header: ReactNode }) {
       const tiltCleanups: Array<() => void> = [];
       if (!coarse && !reduce) {
         const AMP = 12;
-        grid.querySelectorAll<HTMLElement>(".project__media").forEach((media) => {
+        grid
+          .querySelectorAll<HTMLElement>(".project:not(.project--nda) .project__media")
+          .forEach((media) => {
           let tx = 0,
             ty = 0,
             ts = 1,
@@ -189,57 +197,65 @@ export function ProjectGrid({ header }: { header: ReactNode }) {
             </button>
           ))}
         </div>
+        {nda.unlocked && nda.expiresAt && <NdaCountdown expiresAt={nda.expiresAt} />}
       </div>
 
       <div className="work__grid js-projects" ref={gridRef}>
-        {PROJECTS.map((p, i) => {
+        {PROJECTS.map((p) => {
           const cat = projectCategory(p, locale, t(`type.${p.type}`));
-          const href = p.study ? `/work/${p.slug}` : p.link;
-          // case studies stay on the site; the rest open Behance in a new tab
-          const go = p.study ? `${tCursor("view")} ${locale === "ar" ? "←" : "→"}` : "Behance ↗";
+          // every project now has its own page; outward links live on it
+          const href = `/work/${p.slug}`;
+          const go = `${tCursor("view")} ${locale === "ar" ? "←" : "→"}`;
+          const badges = (
+            <>
+              <span className="project__chip">{cat}</span>
+              {p.featured && (
+                <span className="project__chip project__chip--featured">★ {t("featured")}</span>
+              )}
+            </>
+          );
+          const info = (
+            <div className="project__info">
+              <h3 dir="ltr">{p.title}</h3>
+              <span className="project__meta" dir="ltr">
+                {p.year}
+              </span>
+            </div>
+          );
+
+          // NDA: blurred cover behind a password gate (see NdaGate)
+          if (p.nda) {
+            return (
+              <NdaCard key={p.slug} project={p} category={cat} info={info} access={nda} />
+            );
+          }
+
           const media = (
             <>
               <div className="project__media">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={img(p.images.thumb ?? p.images.cover)} alt={p.title} loading="lazy" />
-                <span className="project__chip">{cat}</span>
+                {badges}
                 <span className="project__view mono">{go}</span>
               </div>
-              <div className="project__info">
-                <h3 dir="ltr">{p.title}</h3>
-                <span className="project__meta" dir="ltr">
-                  {p.year}
-                </span>
-              </div>
+              {info}
             </>
           );
-          return p.study ? (
+          return (
             <TransitionLink
               key={p.slug}
               href={href}
               className="project"
               data-type={p.type}
-              data-size={BENTO[i % BENTO.length]}
               data-cursor-label={tCursor("view")}
             >
               {media}
             </TransitionLink>
-          ) : (
-            <a
-              key={p.slug}
-              href={href}
-              className="project"
-              data-type={p.type}
-              data-size={BENTO[i % BENTO.length]}
-              data-cursor-label={tCursor("view")}
-              target="_blank"
-              rel="noopener"
-            >
-              {media}
-            </a>
           );
         })}
       </div>
+
+      <NdaModal access={nda} />
     </>
   );
 }

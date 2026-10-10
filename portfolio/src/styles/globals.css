@@ -54,28 +54,6 @@
   .project__view { display: none; }
 }
 
-/* Case study: optional App Store / Google Play links (render only when set) */
-.c-stores {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin: -20px var(--gutter) 40px;
-}
-.c-store {
-  padding: 14px 26px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--neon);
-  transition: border-color 0.4s, background 0.4s;
-}
-.c-store:hover {
-  border-color: rgba(var(--neon-rgb), 0.5);
-  background: rgba(var(--neon-rgb), 0.03);
-}
-
 /* ===== Stats band ===== */
 .stats { position: relative; z-index: 2; padding: 40px var(--gutter); }
 .stats__head { margin-bottom: 40px; }
@@ -301,25 +279,129 @@ html[lang="ar"] .faq__a { line-height: 1.9; }
   .wstory__facts { grid-template-columns: 1fr 1fr; gap: 14px 20px; }
 }
 
-/* ===== /work archive: bento rows (ProjectGrid sets data-size) ===== */
-.work__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 3vw, 40px) clamp(16px, 1.6vw, 24px); }
+/* ===== /work archive hero — tighter than the home section's =====
+   Scoped to main.work so the home page's <section class="work"> keeps its
+   full-size title. */
+main.work { padding-top: 104px; padding-bottom: 48px; }
+main.work .work__head { margin-bottom: 32px; }
+main.work .work__head .label { margin-bottom: 0.7rem; }
+main.work .section-title { font-size: clamp(40px, 6vw, 86px); }
+html[lang="ar"] main.work .section-title { font-size: clamp(38px, 5.4vw, 78px); }
+
+/* ===== /work archive: uniform dense grid (all cards equal size) =====
+   Every project gets the same frame so the page stays compact and uses the
+   full width — select work is highlighted with a badge, not with size. */
+.work__grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(22px, 2.4vw, 34px) clamp(16px, 1.6vw, 24px);
+}
 /* long titles must not widen their column on narrow screens */
 .project__info h3 { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
-@media (max-width: 900px) { .work__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.work__grid { grid-auto-flow: dense; }
 .project__media { aspect-ratio: 16 / 10; border-radius: 22px; }
 .project__media img { filter: none; }
-/* the wide card spans two rows and its cover fills whatever height they give */
-.project[data-size="wide"] { grid-column: span 2; grid-row: span 2; }
-.project[data-size="wide"] .project__media { aspect-ratio: auto; flex: 1; min-height: 0; }
-@media (max-width: 900px) {
-  .project[data-size="wide"] { grid-row: auto; }
-  .project[data-size="wide"] .project__media { aspect-ratio: 16 / 10; flex: none; }
+/* roomier layout: a 4th column on wide screens for maximum density */
+@media (min-width: 1500px) { .work__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .work__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .work__grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* "featured" badge — sits opposite the category chip, no size change */
+.project__chip--featured {
+  inset-inline-start: auto; inset-inline-end: 14px;
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--bg); background: var(--neon);
+  border-color: transparent;
+  box-shadow: 0 6px 20px rgba(var(--neon-rgb), 0.35);
 }
-@media (max-width: 560px) {
-  .work__grid { grid-template-columns: minmax(0, 1fr); }
-  .project[data-size="wide"] { grid-column: auto; }
+
+/* ===== NDA projects: blurred cover behind a password gate =====
+   The file in /public is ALREADY blurred (scripts/render-nda-blur.mjs) — the
+   CSS blur below is only polish on top. Never point an NDA project's cover at
+   an unblurred original: CSS cannot protect it. */
+.project--nda {
+  /* it is a <button> until unlocked */
+  appearance: none; background: none; border: 0; padding: 0; margin: 0;
+  font: inherit; color: inherit; text-align: start; width: 100%; cursor: pointer;
 }
+.project--nda .project__media {
+  background:
+    radial-gradient(120% 120% at 30% 0%, rgba(var(--neon-rgb), 0.08), transparent 55%),
+    var(--bg-2);
+}
+.project--nda .project__media img { filter: blur(8px) brightness(0.5) saturate(0.75); scale: 1.15; }
+.project--nda:hover { transform: none; }
+.project--nda:hover .project__media img { filter: blur(8px) brightness(0.55) saturate(0.8); scale: 1.15; }
+.project--nda:hover .project__lock svg { transform: scale(1.08); }
+
+.project__lock {
+  position: absolute; inset: 0; z-index: 3;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px; padding: 20px; text-align: center;
+}
+.project__lock svg { width: 30px; height: 30px; color: var(--neon); opacity: 0.9; transition: transform 0.4s var(--ease); }
+.project__lock b { font-size: 14px; font-weight: 600; color: var(--text); }
+.project__lock span { font-size: 12px; color: var(--muted); max-width: 26ch; }
+
+/* unlocked: behaves like any other card again */
+.project--nda.is-unlocked { cursor: pointer; }
+.project--nda.is-unlocked .project__media img { filter: none; scale: 1; }
+.project--nda.is-unlocked:hover { transform: translateY(-6px); }
+.project--nda.is-unlocked:hover .project__media img { scale: 1.08; }
+
+/* countdown pill next to the filter tabs */
+.nda-timer {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 16px; border-radius: 100px; font-size: 12px; color: var(--muted);
+  border: 1px solid rgba(var(--neon-rgb), 0.3); background: rgba(var(--neon-rgb), 0.06);
+}
+.nda-timer b { color: var(--neon); font-weight: 600; }
+
+/* ===== NDA password dialog ===== */
+.nda-overlay {
+  position: fixed; inset: 0; z-index: 120;
+  display: grid; place-items: center; padding: 24px;
+  background: rgba(7, 7, 10, 0.72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  animation: nda-fade 0.25s var(--ease);
+}
+@keyframes nda-fade { from { opacity: 0; } to { opacity: 1; } }
+
+.nda-dialog {
+  position: relative; width: min(420px, 100%);
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  padding: 36px 28px 28px; text-align: center;
+  border-radius: 24px; border: 1px solid var(--line); background: var(--bg-2);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+  animation: nda-pop 0.35s var(--ease);
+}
+@keyframes nda-pop { from { opacity: 0; transform: translateY(16px) scale(0.97); } to { opacity: 1; transform: none; } }
+
+.nda-dialog__x {
+  position: absolute; top: 12px; inset-inline-end: 14px;
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 1px solid var(--line); background: transparent; color: var(--muted);
+  cursor: pointer; transition: 0.3s var(--ease);
+}
+.nda-dialog__x:hover { color: var(--text); border-color: rgba(255, 255, 255, 0.25); }
+.nda-dialog__icon { width: 34px; height: 34px; color: var(--neon); }
+.nda-dialog h3 { font-size: 22px; font-weight: 600; }
+.nda-dialog__desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+.nda-form { display: flex; gap: 10px; width: 100%; margin-top: 4px; flex-wrap: wrap; }
+.nda-input {
+  flex: 1 1 180px; min-width: 0;
+  padding: 13px 18px; border-radius: 100px;
+  border: 1px solid var(--line); background: rgba(255, 255, 255, 0.04); color: var(--text);
+  font: inherit; font-size: 14px; outline: none; transition: border-color 0.3s var(--ease);
+}
+.nda-input:focus { border-color: rgba(var(--neon-rgb), 0.5); }
+.nda-form .btn { flex: 0 0 auto; }
+.nda-form .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.nda-error { font-size: 13px; color: #ff6b6b; }
+.nda-wa {
+  margin-top: 2px; font-size: 13px; color: var(--neon);
+  border-bottom: 1px solid rgba(var(--neon-rgb), 0.35); padding-bottom: 2px;
+}
+.nda-wa:hover { border-bottom-color: var(--neon); }
 
 /* ===== Loader failsafe =====
    The logo loader is server-rendered and only GSAP removes it (~4.3s). If the

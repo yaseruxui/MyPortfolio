@@ -5,6 +5,20 @@ export const DEFAULT_LOCALE: Locale = "ar";
 
 export type ProjectType = "app" | "web" | "brand";
 
+/** Keys a project link can use; each renders as its platform icon.
+    Order here = order the icons appear on the project page. */
+export const LINK_KEYS = [
+  "website",
+  "behance",
+  "dribbble",
+  "figma",
+  "appStore",
+  "googlePlay",
+  "github",
+  "youtube",
+] as const;
+export type ProjectLink = (typeof LINK_KEYS)[number];
+
 export interface CaseStudyContent {
   tagline: string;
   role: string;
@@ -23,12 +37,14 @@ export interface Project {
   type: ProjectType;
   title: string;
   year: number;
-  link: string;
-  /** optional app-store links; a button renders only for the ones set */
-  stores?: {
-    appStore?: string;
-    googlePlay?: string;
-  };
+  /** outward links for this project, shown as icons on its page.
+      Every card now opens /work/<slug> — these are the only links out. */
+  links?: Partial<Record<ProjectLink, string>>;
+  /** highlight this card in the grid with a "featured" badge (size unchanged) */
+  featured?: boolean;
+  /** project under NDA: cover is hidden behind a locked/confidential panel and
+      the card does not link out or open a case study */
+  nda?: boolean;
   images: {
     cover: string;
     /** dark site cover used on the home work section and /work grid

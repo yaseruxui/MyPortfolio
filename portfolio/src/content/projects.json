@@ -4,7 +4,7 @@
     "type": "app",
     "title": "Meetx",
     "year": 2021,
-    "link": "https://www.behance.net/gallery/128451903/Meetx-UXUI-Mobile-App-Design",
+    "featured": true,
     "images": {
       "cover": "images/work/meetx.jpg",
       "thumb": "images/work/covers/meetx.webp",
@@ -32,6 +32,9 @@
         "team": "Team of 6 designers",
         "overview": "Meetx is a social app that makes it easy to organize, discover and join meetups and events. I worked within a team on the user experience and interface, focusing on a clear flow and interactive motion that makes browsing enjoyable. Designed end-to-end in Adobe XD with visual motion in After Effects."
       }
+    },
+    "links": {
+      "behance": "https://www.behance.net/gallery/128451903/Meetx-UXUI-Mobile-App-Design"
     }
   },
   {
@@ -39,7 +42,6 @@
     "type": "app",
     "title": "Cuare",
     "year": 2021,
-    "link": "https://www.behance.net/gallery/125629789/Cuare-UXUI-Mobile-App",
     "images": {
       "cover": "images/work/cuare.png",
       "thumb": "images/work/covers/cuare.webp",
@@ -65,6 +67,9 @@
         "team": "Solo project",
         "overview": "Cuare is a mobile app for booking home and health-care services. I focused the design on simplicity and clarity so anyone can use it with ease — a calm interface, comfortable colors and a quick booking flow from choosing a service to confirmation."
       }
+    },
+    "links": {
+      "behance": "https://www.behance.net/gallery/125629789/Cuare-UXUI-Mobile-App"
     }
   },
   {
@@ -72,7 +77,6 @@
     "type": "app",
     "title": "1Min — Job Finder",
     "year": 2022,
-    "link": "https://www.behance.net/gallery/143023529/1Min-Job-Finder-UXUI-Mobile-App-Design",
     "images": {
       "cover": "images/work/1min.jpg",
       "thumb": "images/work/covers/1min-job-finder.webp",
@@ -100,6 +104,9 @@
         "team": "Solo project",
         "overview": "1Min is a job-search app built around speed — as the name suggests. I designed an experience that shortens the steps between a job seeker and the right opportunity, with clear search and filtering, a simple profile and fast one-tap applying."
       }
+    },
+    "links": {
+      "behance": "https://www.behance.net/gallery/143023529/1Min-Job-Finder-UXUI-Mobile-App-Design"
     }
   },
   {
@@ -107,7 +114,6 @@
     "type": "web",
     "title": "AYAM Store",
     "year": 2022,
-    "link": "https://www.behance.net/gallery/129732471/AYAM-STORE-Home-Page-Redesign",
     "images": {
       "cover": "images/work/ayam.jpg",
       "thumb": "images/work/covers/ayam-store.webp"
@@ -119,6 +125,9 @@
     "en": {
       "category": "Website · Redesign",
       "summary": "Home page redesign for an online store with a clearer shopping experience."
+    },
+    "links": {
+      "behance": "https://www.behance.net/gallery/129732471/AYAM-STORE-Home-Page-Redesign"
     }
   },
   {
@@ -126,7 +135,6 @@
     "type": "web",
     "title": "VIOLA",
     "year": 2022,
-    "link": "https://www.behance.net/gallery/127988644/VIOLA-Landing-Page",
     "images": {
       "cover": "images/work/viola.jpg",
       "thumb": "images/work/covers/viola-landing.webp"
@@ -138,6 +146,9 @@
     "en": {
       "category": "Landing Page · Web",
       "summary": "A modern landing page designed to turn visitors into customers."
+    },
+    "links": {
+      "behance": "https://www.behance.net/gallery/127988644/VIOLA-Landing-Page"
     }
   },
   {
@@ -145,7 +156,6 @@
     "type": "brand",
     "title": "Al Shams — Brand Guideline",
     "year": 2021,
-    "link": "https://www.behance.net/gallery/120000713/Brand-Guideline-",
     "images": {
       "cover": "images/work/brandguide.jpg",
       "thumb": "images/work/covers/brand-guideline-alshams.webp"
@@ -157,6 +167,9 @@
     "en": {
       "category": "Brand Identity · Guideline",
       "summary": "A complete brand guideline for Al Shams Stationery — logo, colors, type and applications."
+    },
+    "links": {
+      "behance": "https://www.behance.net/gallery/120000713/Brand-Guideline-"
     }
   },
   {
@@ -164,7 +177,6 @@
     "type": "brand",
     "title": "Yaser Ahmed — Brand Identity",
     "year": 2020,
-    "link": "https://www.behance.net/gallery/107255171/Yaser-Ahmed-Brand-Identity",
     "images": {
       "cover": "images/work/yaserahmed.jpg",
       "thumb": "images/work/covers/yaser-ahmed-identity.webp"
@@ -176,6 +188,9 @@
     "en": {
       "category": "Brand Identity · Personal",
       "summary": "A personal brand identity, from the logo to print and brand applications."
+    },
+    "links": {
+      "behance": "https://www.behance.net/gallery/107255171/Yaser-Ahmed-Brand-Identity"
     }
   },
   {
@@ -183,7 +198,6 @@
     "type": "brand",
     "title": "Logos Collection",
     "year": 2021,
-    "link": "https://www.behance.net/gallery/125410789/Collection-LOGOS",
     "images": {
       "cover": "images/work/logos.jpg",
       "thumb": "images/work/covers/logos-collection.webp"
@@ -195,6 +209,9 @@
     "en": {
       "category": "Logo Design",
       "summary": "A collection of logos for brands across different industries."
+    },
+    "links": {
+      "behance": "https://www.behance.net/gallery/125410789/Collection-LOGOS"
     }
   },
   {
@@ -202,7 +219,6 @@
     "type": "brand",
     "title": "Social Media Vol.1",
     "year": 2021,
-    "link": "https://www.behance.net/gallery/112458823/SOCIAL-MEDIA-Vol1",
     "images": {
       "cover": "images/work/social.jpg",
       "thumb": "images/work/covers/social-media-vol1.webp"
@@ -214,6 +230,27 @@
     "en": {
       "category": "Social Media Design",
       "summary": "A set of social media designs for a range of brands."
+    },
+    "links": {
+      "behance": "https://www.behance.net/gallery/112458823/SOCIAL-MEDIA-Vol1"
+    }
+  },
+  {
+    "slug": "nda-fintech-app",
+    "type": "app",
+    "title": "Fintech App",
+    "year": 2023,
+    "nda": true,
+    "images": {
+      "cover": "images/work/covers/nda/nda-fintech-app.webp"
+    },
+    "ar": {
+      "category": "تطبيق مالي · تحت NDA",
+      "summary": "تطبيق مدفوعات ومحفظة رقمية — التفاصيل محمية باتفاقية سرية."
+    },
+    "en": {
+      "category": "Fintech · Under NDA",
+      "summary": "A payments and digital-wallet app — details protected under NDA."
     }
   }
 ]

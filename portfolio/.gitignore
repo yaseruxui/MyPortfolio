@@ -19,6 +19,14 @@ npm-debug.log*
 .env*
 !.env.example
 
+# NDA originals — never commit these.
+# Only the baked-blur copies under public/images/work/covers/nda/ are public.
+# NOTE: because this is ignored, the originals are NOT uploaded to Vercel by a
+# git deploy. To serve them in production either make this repo private and
+# remove this line, or keep the originals in private storage (Vercel Blob/S3)
+# and fetch them in src/app/api/nda/[slug]/image/route.ts.
+/private
+
 # local caches / scratch
 /.swccache
 /.swc
