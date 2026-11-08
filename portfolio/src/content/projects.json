@@ -38,6 +38,43 @@
     }
   },
   {
+    "slug": "1min-job-finder",
+    "type": "app",
+    "title": "1Min — Job Finder",
+    "year": 2022,
+    "images": {
+      "cover": "images/work/1min.jpg",
+      "thumb": "images/work/covers/1min-job-finder.webp",
+      "card": "images/work/1min/1.webp",
+      "cardPosition": "top",
+      "gallery": [
+        "images/work/1min/1.webp",
+        "images/work/1min/2.webp",
+        "images/work/1min/3.webp",
+        "images/work/1min/4.webp"
+      ]
+    },
+    "study": {
+      "ar": {
+        "tagline": "تطبيق للبحث عن الوظائف يختصر الطريق بين الباحث والفرصة في أقل وقت.",
+        "role": "مصمم UX/UI",
+        "tools": "Adobe XD",
+        "team": "مشروع فردي",
+        "overview": "1Min تطبيق للبحث عن الوظائف يركّز على السرعة — كما يوحي اسمه. صمّمت تجربة تختصر الخطوات بين الباحث عن عمل والفرصة المناسبة، ببحث وفلترة واضحين وملف تعريفي بسيط وتقديم سريع على الوظائف."
+      },
+      "en": {
+        "tagline": "A job-finding app that shortens the path between a seeker and the right opportunity.",
+        "role": "UX/UI Designer",
+        "tools": "Adobe XD",
+        "team": "Solo project",
+        "overview": "1Min is a job-search app built around speed — as the name suggests. I designed an experience that shortens the steps between a job seeker and the right opportunity, with clear search and filtering, a simple profile and fast one-tap applying."
+      }
+    },
+    "links": {
+      "behance": "https://www.behance.net/gallery/143023529/1Min-Job-Finder-UXUI-Mobile-App-Design"
+    }
+  },
+  {
     "slug": "cuare",
     "type": "app",
     "title": "Cuare",
@@ -73,40 +110,21 @@
     }
   },
   {
-    "slug": "1min-job-finder",
+    "slug": "nda-fintech-app",
     "type": "app",
-    "title": "1Min — Job Finder",
-    "year": 2022,
+    "title": "Fintech App",
+    "year": 2023,
+    "nda": true,
     "images": {
-      "cover": "images/work/1min.jpg",
-      "thumb": "images/work/covers/1min-job-finder.webp",
-      "card": "images/work/1min/1.webp",
-      "cardPosition": "top",
-      "gallery": [
-        "images/work/1min/1.webp",
-        "images/work/1min/2.webp",
-        "images/work/1min/3.webp",
-        "images/work/1min/4.webp"
-      ]
+      "cover": "images/work/covers/nda/nda-fintech-app.webp"
     },
-    "study": {
-      "ar": {
-        "tagline": "تطبيق للبحث عن الوظائف يختصر الطريق بين الباحث والفرصة في أقل وقت.",
-        "role": "مصمم UX/UI",
-        "tools": "Adobe XD",
-        "team": "مشروع فردي",
-        "overview": "1Min تطبيق للبحث عن الوظائف يركّز على السرعة — كما يوحي اسمه. صمّمت تجربة تختصر الخطوات بين الباحث عن عمل والفرصة المناسبة، ببحث وفلترة واضحين وملف تعريفي بسيط وتقديم سريع على الوظائف."
-      },
-      "en": {
-        "tagline": "A job-finding app that shortens the path between a seeker and the right opportunity.",
-        "role": "UX/UI Designer",
-        "tools": "Adobe XD",
-        "team": "Solo project",
-        "overview": "1Min is a job-search app built around speed — as the name suggests. I designed an experience that shortens the steps between a job seeker and the right opportunity, with clear search and filtering, a simple profile and fast one-tap applying."
-      }
+    "ar": {
+      "category": "تطبيق مالي · تحت NDA",
+      "summary": "تطبيق مدفوعات ومحفظة رقمية — التفاصيل محمية باتفاقية سرية."
     },
-    "links": {
-      "behance": "https://www.behance.net/gallery/143023529/1Min-Job-Finder-UXUI-Mobile-App-Design"
+    "en": {
+      "category": "Fintech · Under NDA",
+      "summary": "A payments and digital-wallet app — details protected under NDA."
     }
   },
   {
@@ -173,27 +191,6 @@
     }
   },
   {
-    "slug": "yaser-ahmed-identity",
-    "type": "brand",
-    "title": "Yaser Ahmed — Brand Identity",
-    "year": 2020,
-    "images": {
-      "cover": "images/work/yaserahmed.jpg",
-      "thumb": "images/work/covers/yaser-ahmed-identity.webp"
-    },
-    "ar": {
-      "category": "هوية بصرية · هوية شخصية",
-      "summary": "هوية بصرية شخصية من الشعار حتى المطبوعات وتطبيقات الهوية."
-    },
-    "en": {
-      "category": "Brand Identity · Personal",
-      "summary": "A personal brand identity, from the logo to print and brand applications."
-    },
-    "links": {
-      "behance": "https://www.behance.net/gallery/107255171/Yaser-Ahmed-Brand-Identity"
-    }
-  },
-  {
     "slug": "logos-collection",
     "type": "brand",
     "title": "Logos Collection",
@@ -236,21 +233,24 @@
     }
   },
   {
-    "slug": "nda-fintech-app",
-    "type": "app",
-    "title": "Fintech App",
-    "year": 2023,
-    "nda": true,
+    "slug": "yaser-ahmed-identity",
+    "type": "brand",
+    "title": "Yaser Ahmed — Brand Identity",
+    "year": 2020,
     "images": {
-      "cover": "images/work/covers/nda/nda-fintech-app.webp"
+      "cover": "images/work/yaserahmed.jpg",
+      "thumb": "images/work/covers/yaser-ahmed-identity.webp"
     },
     "ar": {
-      "category": "تطبيق مالي · تحت NDA",
-      "summary": "تطبيق مدفوعات ومحفظة رقمية — التفاصيل محمية باتفاقية سرية."
+      "category": "هوية بصرية · هوية شخصية",
+      "summary": "هوية بصرية شخصية من الشعار حتى المطبوعات وتطبيقات الهوية."
     },
     "en": {
-      "category": "Fintech · Under NDA",
-      "summary": "A payments and digital-wallet app — details protected under NDA."
+      "category": "Brand Identity · Personal",
+      "summary": "A personal brand identity, from the logo to print and brand applications."
+    },
+    "links": {
+      "behance": "https://www.behance.net/gallery/107255171/Yaser-Ahmed-Brand-Identity"
     }
   }
 ]
